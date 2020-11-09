@@ -1,13 +1,13 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    max-width: 773px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 4rem auto 0;
+    margin: auto;
     line-height: 1.5;
     background-color:#e5e5e5;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 1600px;
 
 }
 
@@ -18,6 +18,7 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .menu {
@@ -38,6 +39,13 @@ li {
 
 }
 
+a {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem; 
+    flex-grow: 1;
+}
+
 ul a {
     color: #48418e ;
     text-decoration: none;
@@ -52,6 +60,7 @@ ul a {
 .menu li:hover, 
 .menu li:focus {
     background-color: #48418e;
+    padding: 1rem;
 }
 
 .menu a:hover, 
@@ -91,13 +100,17 @@ h1 {
 }
 
 .tlacitko {
-    padding: 1rem;
+    padding: 0 1rem;
     margin: 0 2rem;
     display: flex;
     justify-content: center;
     border: 1px solid white;
     border-radius: 10px;
     font-size: 1.2rem;
+}
+
+.stahnout {
+    background: rgb(72,65,142);
 }
 
 .info {
@@ -110,11 +123,16 @@ div a {
     text-align: center;
 }
 
-.tlacitko:hover, 
-.tlacitko:focus {
+.info:hover, 
+.info:focus {
     background: rgb(72,65,142);
-    background: linear-gradient(90deg, rgba(72,65,142,0.8953956582633054) 48%, rgba(37,19,61,1) 100%);
 }
+
+.stahnout:hover, 
+.stahnout:focus {
+    background: transparent;
+}
+
 
 .obrazek {
     display: none;    
@@ -139,7 +157,7 @@ div a {
     padding: 1rem;
     max-width: 500px;
     justify-content: center;
-    flex-basis: calc (100%/3);
+    flex-basis: calc(100%/3);
 }
 
 
@@ -171,6 +189,13 @@ h2 {
 
 
 
+@media (max-width: 771px) {
+    li {
+        flex-basis: 50%;
+        box-sizing:border-box;
+    }
+}
+
 
  /* medium size display */
 
@@ -183,7 +208,8 @@ h2 {
     .navigace {
         display: flex;
         flex-direction: row;
-        align-content: start;
+        align-items: flex-start;
+        flex-basis: auto;
     }
 
     .menu {
@@ -215,10 +241,7 @@ h2 {
         margin: 0;
     }
 
-    .tlacitko:hover, 
-    .tlacitko:focus {
-        background: #48418e;
-    }
+
 
     .obsah {
         justify-content: center;
